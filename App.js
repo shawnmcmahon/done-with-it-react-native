@@ -8,14 +8,20 @@ export default function App() {
       style={{
         backgroundColor: '#fff',
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: 'row', // horizontal
+        justifyContent: 'center', //main
+        alignItems: 'center', // secondary
+        flexWrap: 'wrap',
+        alignContent: 'center',
       }}
     >
       <View
         style={{
           backgroundColor: 'dodgerblue',
-          width: 100,
+          width: 100, // width or height
+          // width: 100,
           height: 100,
+          alignSelf: 'flex-start',
         }}
       />
       <View
@@ -23,11 +29,13 @@ export default function App() {
           backgroundColor: 'gold',
           width: 100,
           height: 100,
+          top: 20,
+          left: 20,
         }}
       />
       <View
         style={{
-          backgroundColor: 'tomato',
+          backgroundColor: 'greenyellow',
           width: 100,
           height: 100,
         }}
