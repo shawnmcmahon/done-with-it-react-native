@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TouchableHighlight,
   Button,
+  Alert,
 } from 'react-native';
 
 // View -> UIView
@@ -19,7 +20,12 @@ export default function App() {
       <Button
         color="orange"
         title="Click Me"
-        onPress={() => console.log('button tapped')}
+        onPress={() =>
+          Alert.alert('My Title', 'My Message', [
+            { text: 'Yes', onPress: () => console.log('Yes') },
+            { text: 'No', onPress: () => console.log('No') },
+          ])
+        }
       />
     </SafeAreaView>
   );
